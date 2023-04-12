@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>CALCULATOR</title>
+  </head>
+  <body>
+    <div class="judul">
+      <h1
+        class="fs-1 fw-bold font-monospace text-center text-decoration-underline"
+      >
+        CALCULATOR
+      </h1>
+    </div>
+
+    <div class="container">
+      <table id="count">
+        <tr>
+          <td colspan="3">
+            <input class="rounded" type="text" id="result" />
+          </td>
+          <td>
+            <input
+              class="btn btn-outline-dark"
+              id="tombol"
+              type="button"
+              value="C"
+              onclick="clr()"
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input
+              class="btn btn-outline-dark"
+              class="btn btn-outline-dark"
+              id="tombol"
+              type="button"
+              value="1"
+              onclick="addNumber('1')"
+              onkeydown="keyboard(event)"
+            />
+          </td>
+          <td>
+            <input
+              class="btn btn-outline-dark"
+              id="tombol"
+              type="button"
+              value="2"
+              onclick="addNumber('2')"
+              onkeydown="keyboard(event)"
+            />
+          </td>
+          <td>
+            <input
+              class="btn btn-outline-dark"
+              id="tombol"
+              type="button"
+              value="3"
+              onclick="addNumber('3')"
+              onkeydown="keyboard(event)"
+            />
+          </td>
+          <td>
+            <input
+              class="btn btn-outline-dark"
+              id="tombol"
+              type="button"
+              value="+"
+              onclick="addNumber('+')"
+              onkeydown="keyboard(event)"
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input
+              class="btn btn-outline-dark"
+              id="tombol"
+              type="button"
+              value="4"
+              onclick="addNumber('4')"
+              onkeydown="keyboard(event)"
+            />
+          </td>
+          <td>
+            <input
+              class="btn btn-outline-dark"
+              id="tombol"
+              type="button"
+              value="5"
+              onclick="addNumber('5')"
+              onkeydown="keyboard(event)"
+            />
+          </td>
+          <td>
+            <input
+              class="btn btn-outline-dark"
+              id="tombol"
+              type="button"
+              value="6"
+              onclick="addNumber('6')"
+              onkeydown="keyboard(event)"
+            />
+          </td>
+          <td>
+            <input
+              class="btn btn-outline-dark"
+              id="tombol"
+              type="button"
+              value="-"
+              onclick="addNumber('-')"
+              onkeydown="keyboard(event)"
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input
+              class="btn btn-outline-dark"
+              id="tombol"
+              type="button"
+              value="7"
+              onclick="addNumber('7')"
+              onkeydown="keyboard(event)"
+            />
+          </td>
+          <td>
+            <input
+              class="btn btn-outline-dark"
+              id="tombol"
+              type="button"
+              value="8"
+              onclick="addNumber('8')"
+              onkeydown="keyboard(event)"
+            />
+          </td>
+          <td>
+            <input
+              class="btn btn-outline-dark"
+              id="tombol"
+              type="button"
+              value="9"
+              onclick="addNumber('9')"
+              onkeydown="keyboard(event)"
+            />
+          </td>
+          <td>
+            <input
+              class="btn btn-outline-dark"
+              id="tombol"
+              type="button"
+              value="x"
+              onclick="addNumber('*')"
+              onkeydown="keyboard(event)"
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input
+              class="btn btn-outline-dark"
+              id="tombol"
+              type="button"
+              value="0"
+              onclick="addNumber('0')"
+              onkeydown="keyboard(event)"
+            />
+          </td>
+          <td>
+            <input
+              class="btn btn-outline-dark"
+              id="tombol"
+              type="button"
+              value="="
+              onclick="solve()"
+            />
+          </td>
+          <td>
+            <input
+              class="btn btn-outline-dark"
+              id="tombol"
+              type="button"
+              value="."
+              onclick="addNumber('.')"
+              onkeydown="keyboard(event)"
+            />
+          </td>
+          <td>
+            <input
+              class="btn btn-outline-dark"
+              id="tombol"
+              type="button"
+              value="/"
+              onclick="addNumber('/')"
+              onkeydown="keyboard(event)"
+            />
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
+      integrity="sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js"
+      integrity="sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>

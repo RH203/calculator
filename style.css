@@ -1,0 +1,18 @@
+#tombol {
+    width: 100%;
+}
+
+#count{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.judul {
+    margin-top: 140px;
+}
+
+#result {
+    width: 100%;
+}
